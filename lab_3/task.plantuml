@@ -1,0 +1,24 @@
+@startuml "Шаблонный метод"
+title Template method
+class SortingAlgorithm {
+    +sort()
+    -compare()
+    -swap()
+}
+
+class QuickSort {
+    +sort()
+    -quickSort()
+}
+
+class MergeSort {
+    +sort()
+    -mergeSort()
+    -merge()
+}
+
+SortingAlgorithm <|-- QuickSort
+SortingAlgorithm <|-- MergeSort
+
+hide empty fields
+@enduml
