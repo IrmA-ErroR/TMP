@@ -1,10 +1,11 @@
-@startuml "Стратегия"
+@startuml "Strategy"
 title Strategy
 interface Strategy {
     +do(arr)
 }
 
 class Strategy1 {
+    +quick_sort(arr)
     +do(arr)
 }
 
@@ -15,7 +16,7 @@ class Strategy2 {
 class Context {
     + strategy: None
     + set_strategy(Strategy) 
-    + make_sorting()  
+    + make_sorting(arr)  
     
 }
 

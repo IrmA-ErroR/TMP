@@ -1,4 +1,4 @@
-@startuml "Шаблонный метод"
+@startuml "Template method"
 title Template method
 class SortingAlgorithm {
     +sort()

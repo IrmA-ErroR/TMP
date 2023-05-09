@@ -1,9 +1,10 @@
+from abc import ABCMeta, abstractmethod
 import random
-from typing import Self
 
-class Strategy():
+class Strategy(ABCMeta):
+    @abstractmethod
     def do(self, arr):
-        print('Start')
+        pass
 
 class Strategy1(Strategy):
     def quick_sort(self, arr):
@@ -40,17 +41,18 @@ class Strategy2(Strategy):
 class Context:
     
     def __init__(self) -> None:        
-      self.strategy = None
+        self.strategy = None
         
     
-    def set_strategy(strategy: 'Strategy') -> None:
-        Self.strategy = strategy
+    def set_strategy(Strategy) -> None:
+        self.strategy = Strategy
         
     def make_sorting(arr) -> list[int]:
-        return Self.strategy.do(arr)
+        return self.strategy.do(arr)
 
 
 arr = [2, 5, 6, 8, 1, 3, 7, 4, 9, 0]
+
 context = Context()
 
 # Выбираем стратерию  Quick Sort 
