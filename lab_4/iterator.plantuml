@@ -1,5 +1,5 @@
 @startuml "iterator_visitor"
-title Template && Visitor
+title Iterator && Visitor
 
 class BurgerIterator {
     +__init__(self)
